@@ -26,6 +26,11 @@ ul {
         "sidebar main main main main";
 }
 
+.icon {
+    height: 20px;
+    width: auto;
+}
+
 /*SIDEBAR*/
 .sidebar {
     grid-area: sidebar;
@@ -42,6 +47,11 @@ ul {
     display: grid;
 }
 
+.dash-icon {
+    height: 25px;
+    width: auto;
+}
+
 /*HEADER*/
 .header {
     grid-area: header;
@@ -49,12 +59,52 @@ ul {
     background-color: rgba(255, 0, 0, 0.25);
     padding: 16px;
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 2fr / 2fr 1fr;
     gap: 8px;
 }
 
 .header > div {
     border: 1px solid purple;
+}
+
+/**/
+.searchbar {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+/**/
+.miniuser {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.mini-avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+/**/
+.user {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid blue;
+}
+
+/**/
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: space-around;
+    align-items: center;
 }
 
 /*MAIN*/
@@ -90,6 +140,13 @@ ul {
     border: 1px solid red;
 }
 
+.card-icons {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    justify-content: end;
+    gap: 16px;
+}
+
 /**/
 .secondSidebar {
     display: grid;
@@ -104,10 +161,25 @@ ul {
     gap: 8px;
 }
 
+/**/
+.items1 {
+    display: grid;
+}
+
 .item1 {
     border: 1px solid red;
 }
 
 .item1 > p:last-child {
     font-size: small;
+}
+
+/**/
+.items2 {
+    display: grid;
+}
+
+.item2 {
+    display: grid;
+    grid-template-columns: min-content 1fr;
 }
