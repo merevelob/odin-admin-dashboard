@@ -31,7 +31,7 @@ ul {
     grid-area: sidebar;
     border: 1px solid darkblue;
     background-color: rgba(0, 0, 255, 0.25);
-    padding: 8px;
+    padding: 16px;
     display: grid;
     grid-template-rows: repeat(3, min-content);
     gap: 16px;
@@ -47,7 +47,7 @@ ul {
     grid-area: header;
     border: 1px solid darkred;
     background-color: rgba(255, 0, 0, 0.25);
-    padding: 8px;
+    padding: 16px;
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     gap: 8px;
@@ -62,4 +62,52 @@ ul {
     grid-area: main;
     border: 1px solid darkgreen;
     background-color: rgba(0, 255, 0, 0.25);
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 16px;
+}
+
+.main > div {
+    border: 1px solid purple;
+}
+
+/**/
+.projects {
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 8px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 8px;
+}
+
+.card {
+    border: 1px solid red;
+}
+
+/**/
+.secondSidebar {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.cont1, .cont2 {
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 8px;
+}
+
+.item1 {
+    border: 1px solid red;
+}
+
+.item1 > p:last-child {
+    font-size: small;
 }
