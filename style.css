@@ -26,7 +26,7 @@ ul {
         "sidebar main main main main";
 }
 
-/**/
+/*SIDEBAR*/
 .sidebar {
     grid-area: sidebar;
     border: 1px solid darkblue;
@@ -42,13 +42,22 @@ ul {
     display: grid;
 }
 
-/**/
+/*HEADER*/
 .header {
     grid-area: header;
     border: 1px solid darkred;
     background-color: rgba(255, 0, 0, 0.25);
+    padding: 8px;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    gap: 8px;
 }
 
+.header > div {
+    border: 1px solid purple;
+}
+
+/*MAIN*/
 .main {
     grid-area: main;
     border: 1px solid darkgreen;
