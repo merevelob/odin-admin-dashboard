@@ -1,3 +1,12 @@
+/*Colour palette*/
+:root {
+    --colour1: #F2DFEB;
+    --colour2: #153440;
+    --colour3: #D91E0D;
+    --colour4: #8C5656;
+    --colour5: #D98989;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -29,13 +38,14 @@ ul {
 .icon {
     height: 20px;
     width: auto;
+    fill: var(--colour1);
 }
 
 /*SIDEBAR*/
 .sidebar {
     grid-area: sidebar;
     border: 1px solid darkblue;
-    background-color: rgba(0, 0, 255, 0.25);
+    background-color: var(--colour2);
     padding: 16px;
     display: grid;
     grid-template-rows: repeat(3, min-content);
@@ -50,13 +60,22 @@ ul {
 .dash-icon {
     height: 25px;
     width: auto;
+    fill: var(--colour1);
+}
+
+.sidebar span {
+    color: var(--colour1);
+}
+
+.title span {
+    font-size: large;
 }
 
 /*HEADER*/
 .header {
     grid-area: header;
     border: 1px solid darkred;
-    background-color: rgba(255, 0, 0, 0.25);
+    background-color: var(--colour1);
     padding: 16px;
     display: grid;
     grid-template: 1fr 2fr / 2fr 1fr;
@@ -111,7 +130,7 @@ ul {
 .main {
     grid-area: main;
     border: 1px solid darkgreen;
-    background-color: rgba(0, 255, 0, 0.25);
+    background-color: var(--colour5);
     padding: 16px;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -137,6 +156,7 @@ ul {
 }
 
 .card {
+    background-color: var(--colour1);
     border: 1px solid red;
 }
 
@@ -163,6 +183,7 @@ ul {
 
 /**/
 .items1 {
+    background-color: var(--colour1);
     display: grid;
 }
 
@@ -180,6 +201,7 @@ ul {
 }
 
 .item2 {
+    background-color: var(--colour1);
     display: grid;
     grid-template-columns: min-content 1fr;
 }
