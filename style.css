@@ -7,8 +7,15 @@
     --colour5: #D98989;
 }
 
+@font-face {
+    font-family: 'Gabarito';
+    src: url('./assets/font/Gabarito-Regular.ttf'),
+    url('./assets/font/Gabarito-Bold.ttf');
+}
+
 html {
     box-sizing: border-box;
+    font-family: 'Gabarito', cursive;
 }
 
 * {
@@ -38,7 +45,7 @@ ul {
 .icon {
     height: 20px;
     width: auto;
-    fill: var(--colour1);
+    cursor: pointer;
 }
 
 /*SIDEBAR*/
@@ -48,22 +55,39 @@ ul {
     padding: 16px;
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    gap: 16px;
+    gap: 40px;
 }
 
 .sb {
-    border: 1px solid purple;
     display: grid;
 }
 
+.sb ul {
+    display: grid;
+    gap: 16px;
+}
+
+.sb li {
+    display: grid;
+    grid-template-columns: 30px min-content;
+    gap: 8px;
+    align-items: center;
+}
+
+.sb img {
+    justify-self: center;
+}
+
 .dash-icon {
-    height: 25px;
+    height: 30px;
     width: auto;
-    fill: var(--colour1);
+    cursor: pointer;
 }
 
 .sidebar span {
     color: var(--colour1);
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .title span {
