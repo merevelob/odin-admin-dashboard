@@ -44,7 +44,6 @@ ul {
 /*SIDEBAR*/
 .sidebar {
     grid-area: sidebar;
-    border: 1px solid darkblue;
     background-color: var(--colour2);
     padding: 16px;
     display: grid;
@@ -74,11 +73,10 @@ ul {
 /*HEADER*/
 .header {
     grid-area: header;
-    border: 1px solid darkred;
     background-color: var(--colour1);
     padding: 16px;
     display: grid;
-    grid-template: 1fr 2fr / 2fr 1fr;
+    grid-template: repeat(2, min-content) / 2fr 1fr;
     gap: 8px;
 }
 
@@ -129,7 +127,6 @@ ul {
 /*MAIN*/
 .main {
     grid-area: main;
-    border: 1px solid darkgreen;
     background-color: var(--colour5);
     padding: 16px;
     display: grid;
@@ -137,12 +134,9 @@ ul {
     column-gap: 16px;
 }
 
-.main > div {
-    border: 1px solid purple;
-}
-
 /**/
 .projects {
+    border: 1px solid purple;
     grid-row: span 2;
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -151,13 +145,12 @@ ul {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 .card {
     background-color: var(--colour1);
-    border: 1px solid red;
 }
 
 .card-icons {
@@ -187,8 +180,8 @@ ul {
     display: grid;
 }
 
-.item1 {
-    border: 1px solid red;
+.item1 + div {
+    border-top: 1px solid red;
 }
 
 .item1 > p:last-child {
