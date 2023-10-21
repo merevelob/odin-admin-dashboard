@@ -97,7 +97,7 @@ ul {
 /*HEADER*/
 .header {
     grid-area: header;
-    background-color: var(--colour1);
+    background-color: var(--colour5);
     padding: 16px;
     display: grid;
     grid-template: repeat(2, min-content) / 2fr 1fr;
@@ -105,53 +105,100 @@ ul {
 }
 
 .header > div {
-    border: 1px solid purple;
+    padding: 0 16px;
 }
 
 /**/
 .searchbar {
     display: grid;
     grid-template-columns: min-content 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+.searchbar > input {
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    background-color: var(--colour1);
+    font-size: medium;
+    padding: 2px 8px;
 }
 
 /**/
 .miniuser {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, min-content) max-content;
+    gap: 32px;
+    justify-content: end;
+    align-items: center;
 }
 
 .mini-avatar {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: auto;
     border-radius: 50%;
+    cursor: pointer;
     border: 1px solid blue;
+}
+
+.wolf {
+    background-color: var(--colour3);
+}
+
+.miniuser > span {
+    font-size: medium;
+    font-weight: bold;
 }
 
 /**/
 .user {
     display: grid;
     grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 16px;
 }
 
 .avatar {
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: auto;
     border-radius: 50%;
-    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.user-info > p:first-child {
+    font-size: small;
+    font-weight: bold;
+}
+
+.user-info > p:last-child {
+    font-size: large;
+    font-weight: bold;
 }
 
 /**/
 .buttons {
     display: grid;
     grid-template-columns: repeat(3, min-content);
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+.buttons > button {
+    width: 88px;
+    color: var(--colour1);
+    background-color: var(--colour2);
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /*MAIN*/
 .main {
     grid-area: main;
-    background-color: var(--colour5);
+    background-color: var(--colour4);
     padding: 16px;
     display: grid;
     grid-template-columns: 3fr 1fr;
